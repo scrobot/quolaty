@@ -1,0 +1,27 @@
+[project]
+name = "quolaty"
+version = "1.0.0"
+description = "Latin quote generator"
+readme = "README.rst"
+license = {text = "MIT"}
+maintainers = [{name = "Scrobot", email = "scrobot91@gmail.com"}]
+dependencies = [
+    "flask"
+]
+[project.urls]
+Documentation = "https://flask.palletsprojects.com/tutorial/"
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["error"]
+
+[tool.coverage.run]
+branch = true
+source = ["quolaty", "tests"]
