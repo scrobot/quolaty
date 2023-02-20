@@ -4,7 +4,7 @@ from flask import Flask
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 
-from app.quolaty import blog
+from app.quolaty import quotes
 
 
 def create_app(test_config=None):
@@ -39,7 +39,7 @@ def create_app(test_config=None):
     migrate.init_app(app)
 
     # apply the blueprints to the app
-    app.register_blueprint(blog.bp)
+    app.register_blueprint(quotes.bp)
 
     # make url_for('index') == url_for('blog.index')
     # in another app, you might define a separate main index here with

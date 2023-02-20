@@ -7,13 +7,13 @@ from flask import request
 from flask import url_for
 from werkzeug.exceptions import abort
 
-bp = Blueprint("blog", __name__)
+bp = Blueprint("quotes", __name__)
 
 
 @bp.route("/")
 def index():
     """Show all the posts, most recent first."""
-    posts = []
+    posts = [1, 2, 3, 4, 5]
     return {
         "posts": posts,
     }
